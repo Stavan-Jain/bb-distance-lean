@@ -1,0 +1,15 @@
+bb-distance-lean
+Copyright 2026 Stavan Jain
+
+Extracted from Stavan-Jain/QECLean at
+88ffe0a5d166bfb3c63b23228d4beb59f5f53384 and Stavan-Jain/qec-lab at
+b014c83417f12c9786d95831de919f33e3494370.
+
+The extraction relocates Lean modules and updates their imports. Mathematical
+declaration namespaces and proof bodies are preserved. Generator entry points,
+module mappings, validation tooling, and repository documentation are adapted
+to the standalone repository. See provenance/module-migration.json.
+
+Gross was extracted from QECLean at
+da1725367064f0ea22523b6dd7debe2ce40f9dbb, with its generators from qec-lab at
+aca715a4d03ecc6438b6300105b4f8446c318abe.

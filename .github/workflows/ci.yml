@@ -1,0 +1,54 @@
+name: Build and verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bb-distance-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  certificates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check module layout and dependency pin
+        run: python3 scripts/check_layout.py
+      - name: Test validation tooling
+        run: python3 -m unittest discover -s scripts -p 'test_*.py'
+      - name: Reproduce Gross certificates
+        run: python3 scripts/gross/generate.py --verify
+      - name: Reproduce Bravyi360 certificates
+        run: python3 scripts/bravyi360/generate.py --verify
+
+  lean:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    env:
+      # Each certificate module loads a substantial environment. Bound memory
+      # use so concurrent kernel checks cannot starve the hosted runner.
+      LEAN_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add swap space
+        run: |
+          sudo fallocate -l 12G /mnt/bb-distance.swap
+          sudo chmod 600 /mnt/bb-distance.swap
+          sudo mkswap /mnt/bb-distance.swap
+          sudo swapon /mnt/bb-distance.swap
+          free -h
+      - uses: leanprover/lean-action@v1
+      - name: Audit proof axioms
+        run: lake env lean scripts/AxiomCheck.lean
+      - name: Check the public code parameters
+        run: lake env lean scripts/PublicApi.lean
+      - name: Check Gross uses the general framework
+        run: lake env lean scripts/GrossCheck.lean
+      - name: Build concrete blueprint annotations
+        run: lake build BBDistanceBlueprint

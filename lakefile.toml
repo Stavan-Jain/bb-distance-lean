@@ -1,0 +1,24 @@
+name = "BBDistance"
+version = "0.1.0"
+keywords = ["math", "quantum-error-correction"]
+defaultTargets = ["BBDistance"]
+
+[leanOptions]
+pp.unicode.fun = true
+autoImplicit = false
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+maxSynthPendingDepth = 3
+
+# Keep this exact revision in sync with lake-manifest.json.
+[[require]]
+name = "QEC"
+git = "https://github.com/Stavan-Jain/QECLean"
+rev = "f51011bd6d1af9e225a19a5d5ff672000f3c9d94"
+
+[[lean_lib]]
+name = "BBDistance"
+
+# Optional blueprint annotations for the concrete Gross development.
+[[lean_lib]]
+name = "BBDistanceBlueprint"

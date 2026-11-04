@@ -1,0 +1,1332 @@
+{
+  "modules": {
+    "Bravyi360Distance": {
+      "target": "BBDistance.Bravyi360.Distance",
+      "existing": false
+    },
+    "Bravyi360Witness": {
+      "target": "BBDistance.Bravyi360.Witness",
+      "existing": false
+    },
+    "Bravyi360Packaging": {
+      "target": "BBDistance.Bravyi360.Packaging",
+      "existing": false
+    },
+    "Bravyi360Sparse": {
+      "target": "BBDistance.Bravyi360.Sparse",
+      "existing": false
+    },
+    "Bravyi360Defs": {
+      "target": "BBDistance.Bravyi360.Defs",
+      "existing": false
+    },
+    "MaskLinear": {
+      "target": "BBDistance.Certificate.MaskLinear",
+      "existing": false
+    },
+    "Bravyi360RankData": {
+      "target": "BBDistance.Bravyi360.RankData",
+      "existing": false
+    },
+    "TrimChecks": {
+      "target": "QEC.Stabilizer.Framework.Homological.Certificate.TrimChecks",
+      "existing": true
+    },
+    "PresentationScratch": {
+      "target": "QEC.Stabilizer.Framework.Homological.Presentation",
+      "existing": true
+    },
+    "Bravyi360OrbitCensus": {
+      "target": "BBDistance.Bravyi360.OrbitCensus",
+      "existing": false
+    },
+    "OrbitGlobalProperties": {
+      "target": "BBDistance.Bravyi360.OrbitGlobalProperties",
+      "existing": false
+    },
+    "OrbitBatchMetadata": {
+      "target": "BBDistance.Bravyi360.OrbitBatchMetadata",
+      "existing": false
+    },
+    "OrbitBatchMetadataChecks": {
+      "target": "BBDistance.Bravyi360.OrbitBatchMetadataChecks",
+      "existing": false
+    },
+    "OrbitBatchData": {
+      "target": "BBDistance.Bravyi360.OrbitBatchData",
+      "existing": false
+    },
+    "PackedDigits": {
+      "target": "BBDistance.Certificate.PackedDigits",
+      "existing": false
+    },
+    "OrbitBatchCheck": {
+      "target": "BBDistance.Bravyi360.OrbitBatchCheck",
+      "existing": false
+    },
+    "OrbitBatchConcreteSoundness": {
+      "target": "BBDistance.Bravyi360.OrbitBatchConcreteSoundness",
+      "existing": false
+    },
+    "OrbitBatchSoundness": {
+      "target": "BBDistance.Bravyi360.OrbitBatchSoundness",
+      "existing": false
+    },
+    "OrbitBatchSemantics": {
+      "target": "BBDistance.Bravyi360.OrbitBatchSemantics",
+      "existing": false
+    },
+    "PackedLaneShifts": {
+      "target": "BBDistance.Certificate.PackedLaneShifts",
+      "existing": false
+    },
+    "OrbitPackedExtra": {
+      "target": "BBDistance.Certificate.OrbitPackedExtra",
+      "existing": false
+    },
+    "GBOrbitAction": {
+      "target": "BBDistance.Bravyi360.GBOrbitAction",
+      "existing": false
+    },
+    "OrbitPackSemantics": {
+      "target": "BBDistance.Bravyi360.OrbitPackSemantics",
+      "existing": false
+    },
+    "OrbitCensus": {
+      "target": "QEC.Stabilizer.Framework.Homological.Certificate.OrbitCensus",
+      "existing": true
+    },
+    "OrbitFixedSum": {
+      "target": "BBDistance.Bravyi360.OrbitFixedSum",
+      "existing": false
+    },
+    "PackedEquality": {
+      "target": "BBDistance.Certificate.PackedEquality",
+      "existing": false
+    },
+    "PackedSequence": {
+      "target": "BBDistance.Certificate.PackedSequence",
+      "existing": false
+    },
+    "PackedPopcount": {
+      "target": "BBDistance.Certificate.PackedPopcount",
+      "existing": false
+    },
+    "BatchLinear": {
+      "target": "BBDistance.Certificate.BatchLinear",
+      "existing": false
+    },
+    "FiniteSumExceptions": {
+      "target": "BBDistance.Certificate.FiniteSumExceptions",
+      "existing": false
+    },
+    "GBReflectedAction": {
+      "target": "BBDistance.Bravyi360.GBReflectedAction",
+      "existing": false
+    },
+    "OrbitIndexedCensus": {
+      "target": "QEC.Stabilizer.Framework.Homological.Certificate.OrbitIndexedCensus",
+      "existing": true
+    },
+    "ReachableCensusBound": {
+      "target": "BBDistance.Bravyi360.ReachableCensusBound",
+      "existing": false
+    },
+    "ReachableBasisChecks": {
+      "target": "BBDistance.Bravyi360.ReachableBasisChecks",
+      "existing": false
+    },
+    "TrellisBasisBridge": {
+      "target": "BBDistance.Bravyi360.TrellisBasisBridge",
+      "existing": false
+    },
+    "ConcreteTrellis": {
+      "target": "BBDistance.Bravyi360.ConcreteTrellis",
+      "existing": false
+    },
+    "FastTrellis": {
+      "target": "BBDistance.Certificate.FastTrellis",
+      "existing": false
+    },
+    "PackedSwapPermutation": {
+      "target": "BBDistance.Certificate.PackedSwapPermutation",
+      "existing": false
+    },
+    "PackedProgram": {
+      "target": "BBDistance.Certificate.PackedProgram",
+      "existing": false
+    },
+    "TrellisProgram": {
+      "target": "BBDistance.Certificate.Trellis",
+      "existing": false
+    },
+    "SwapNumeric": {
+      "target": "BBDistance.Certificate.SwapNumeric",
+      "existing": false
+    },
+    "SwapTransport": {
+      "target": "BBDistance.Certificate.SwapTransport",
+      "existing": false
+    },
+    "SwapGeneric": {
+      "target": "BBDistance.Certificate.SwapGeneric",
+      "existing": false
+    },
+    "ConcreteCensusBounds": {
+      "target": "BBDistance.Bravyi360.ConcreteCensusBounds",
+      "existing": false
+    },
+    "TrellisSpanCensus": {
+      "target": "BBDistance.Certificate.TrellisSpanCensus",
+      "existing": false
+    },
+    "TrellisCensus": {
+      "target": "BBDistance.Certificate.TrellisCensus",
+      "existing": false
+    },
+    "WeightCount": {
+      "target": "BBDistance.Certificate.WeightCensus",
+      "existing": false
+    },
+    "Censusstab": {
+      "target": "BBDistance.Bravyi360.Censusstab",
+      "existing": false
+    },
+    "CensusW121": {
+      "target": "BBDistance.Bravyi360.CensusW121",
+      "existing": false
+    },
+    "CensusW151": {
+      "target": "BBDistance.Bravyi360.CensusW151",
+      "existing": false
+    },
+    "CensusW238": {
+      "target": "BBDistance.Bravyi360.CensusW238",
+      "existing": false
+    },
+    "Censuscycle": {
+      "target": "BBDistance.Bravyi360.Censuscycle",
+      "existing": false
+    },
+    "ConcretePermutations": {
+      "target": "BBDistance.Bravyi360.ConcretePermutations",
+      "existing": false
+    },
+    "MaskPermutation": {
+      "target": "BBDistance.Certificate.MaskPermutation",
+      "existing": false
+    },
+    "KernelSpan": {
+      "target": "BBDistance.Certificate.KernelSpan",
+      "existing": false
+    },
+    "Bravyi360ReachabilityData": {
+      "target": "BBDistance.Bravyi360.ReachabilityData",
+      "existing": false
+    },
+    "ReachableTranslation": {
+      "target": "BBDistance.Bravyi360.ReachableTranslation",
+      "existing": false
+    },
+    "Bravyi360Membership": {
+      "target": "BBDistance.Bravyi360.Membership",
+      "existing": false
+    },
+    "TranslationNormalization": {
+      "target": "BBDistance.Bravyi360.TranslationNormalization",
+      "existing": false
+    },
+    "MaskFiber": {
+      "target": "BBDistance.Certificate.MaskFiber",
+      "existing": false
+    },
+    "Bravyi360BottomComplete": {
+      "target": "BBDistance.Bravyi360.BottomComplete",
+      "existing": false
+    },
+    "Bravyi360BottomFiberBridge": {
+      "target": "BBDistance.Bravyi360.BottomFiberBridge",
+      "existing": false
+    },
+    "Bravyi360BottomCaseChecks": {
+      "target": "BBDistance.Bravyi360.BottomCaseChecks",
+      "existing": false
+    },
+    "Bravyi360BottomCaseData": {
+      "target": "BBDistance.Bravyi360.BottomCaseData",
+      "existing": false
+    },
+    "Bravyi360Fibers": {
+      "target": "BBDistance.Bravyi360.Fibers",
+      "existing": false
+    },
+    "Bravyi360FiberData": {
+      "target": "BBDistance.Bravyi360.FiberData",
+      "existing": false
+    },
+    "Bravyi360MiddleSparse": {
+      "target": "BBDistance.Bravyi360.MiddleSparse",
+      "existing": false
+    },
+    "Bravyi360DeckJoin": {
+      "target": "BBDistance.Bravyi360.DeckJoin",
+      "existing": false
+    },
+    "Bravyi360Join": {
+      "target": "BBDistance.Bravyi360.Join",
+      "existing": false
+    },
+    "MaskJoin": {
+      "target": "BBDistance.Certificate.MaskJoin",
+      "existing": false
+    },
+    "Bravyi360TopBank": {
+      "target": "BBDistance.Bravyi360.TopBank",
+      "existing": false
+    },
+    "SearchInitial": {
+      "target": "BBDistance.Certificate.SearchInitial",
+      "existing": false
+    },
+    "SearchSoundness": {
+      "target": "BBDistance.Certificate.SearchSoundness",
+      "existing": false
+    },
+    "SearchBits": {
+      "target": "BBDistance.Certificate.SearchBits",
+      "existing": false
+    },
+    "SearchTree": {
+      "target": "BBDistance.Certificate.SearchTree",
+      "existing": false
+    },
+    "ParityFold": {
+      "target": "BBDistance.Certificate.ParityFold",
+      "existing": false
+    },
+    "BitsetTrie": {
+      "target": "BBDistance.Certificate.BitsetTrie",
+      "existing": false
+    },
+    "SparsePopBound": {
+      "target": "BBDistance.Certificate.SparsePopBound",
+      "existing": false
+    },
+    "MaskedAffine": {
+      "target": "BBDistance.Certificate.MaskedAffine",
+      "existing": false
+    },
+    "Bravyi360DeepNormalization": {
+      "target": "BBDistance.Bravyi360.DeepNormalization",
+      "existing": false
+    },
+    "DeepFiberData": {
+      "target": "BBDistance.Bravyi360.DeepFiberData",
+      "existing": false
+    },
+    "Bravyi360BottomShallow": {
+      "target": "BBDistance.Bravyi360.BottomShallow",
+      "existing": false
+    },
+    "BottomShallowAssembly": {
+      "target": "BBDistance.Bravyi360.BottomShallowAssembly",
+      "existing": false
+    },
+    "BottomShallowLinks": {
+      "target": "BBDistance.Bravyi360.BottomShallowLinks",
+      "existing": false
+    },
+    "BottomShallowLinkPart0": {
+      "target": "BBDistance.Bravyi360.BottomShallowLinkPart0",
+      "existing": false
+    },
+    "BottomShallowCacheCheck": {
+      "target": "BBDistance.Bravyi360.BottomShallowCacheCheck",
+      "existing": false
+    },
+    "BottomShallowChunkCheck": {
+      "target": "BBDistance.Bravyi360.BottomShallowChunkCheck",
+      "existing": false
+    },
+    "BottomShallowLinkCheck": {
+      "target": "BBDistance.Bravyi360.BottomShallowLinkCheck",
+      "existing": false
+    },
+    "Bravyi360BottomBetaCache": {
+      "target": "BBDistance.Bravyi360.BottomBetaCache",
+      "existing": false
+    },
+    "Bravyi360BottomForest": {
+      "target": "BBDistance.Bravyi360.BottomForest",
+      "existing": false
+    },
+    "BottomForestGroup": {
+      "target": "BBDistance.Bravyi360.BottomForestGroup",
+      "existing": false
+    },
+    "BottomForestSound": {
+      "target": "BBDistance.Bravyi360.BottomForestSound",
+      "existing": false
+    },
+    "BottomForestCheck": {
+      "target": "BBDistance.Bravyi360.BottomForestCheck",
+      "existing": false
+    },
+    "Bravyi360Adjoints": {
+      "target": "BBDistance.Bravyi360.Adjoints",
+      "existing": false
+    },
+    "Bravyi360BottomEAdjoint": {
+      "target": "BBDistance.Bravyi360.BottomEAdjoint",
+      "existing": false
+    },
+    "MaskAdjoint": {
+      "target": "BBDistance.Certificate.MaskAdjoint",
+      "existing": false
+    },
+    "MaskDual": {
+      "target": "BBDistance.Certificate.MaskDual",
+      "existing": false
+    },
+    "DualCover": {
+      "target": "QEC.Stabilizer.Framework.Homological.Certificate.DualCover",
+      "existing": true
+    },
+    "ReconWindow": {
+      "target": "BBDistance.Certificate.ReconWindow",
+      "existing": false
+    },
+    "Bravyi360BottomRAdjoint": {
+      "target": "BBDistance.Bravyi360.BottomRAdjoint",
+      "existing": false
+    },
+    "Bravyi360TopEAdjoint": {
+      "target": "BBDistance.Bravyi360.TopEAdjoint",
+      "existing": false
+    },
+    "Bravyi360TopRAdjoint": {
+      "target": "BBDistance.Bravyi360.TopRAdjoint",
+      "existing": false
+    },
+    "MaskPeel": {
+      "target": "BBDistance.Certificate.MaskPeel",
+      "existing": false
+    },
+    "PackedListCertificate": {
+      "target": "BBDistance.Certificate.PackedListCertificate",
+      "existing": false
+    },
+    "MaskRowEval": {
+      "target": "BBDistance.Certificate.MaskRowEval",
+      "existing": false
+    },
+    "ForestReconstruct": {
+      "target": "BBDistance.Certificate.ForestReconstruct",
+      "existing": false
+    },
+    "ReconWalk": {
+      "target": "BBDistance.Certificate.ReconWalk",
+      "existing": false
+    },
+    "SmallMaskPair": {
+      "target": "BBDistance.Certificate.SmallMaskPair",
+      "existing": false
+    },
+    "TaggedReconstruction": {
+      "target": "BBDistance.Certificate.TaggedReconstruction",
+      "existing": false
+    },
+    "ReconComposition": {
+      "target": "BBDistance.Certificate.ReconComposition",
+      "existing": false
+    },
+    "BatchListBinary": {
+      "target": "BBDistance.Certificate.BatchListBinary",
+      "existing": false
+    },
+    "BatchReconLane": {
+      "target": "BBDistance.Certificate.BatchReconLane",
+      "existing": false
+    },
+    "BottomForestFastPart0": {
+      "target": "BBDistance.Bravyi360.BottomForestFastPart0",
+      "existing": false
+    },
+    "BottomForestPacked": {
+      "target": "BBDistance.Bravyi360.BottomForestPacked",
+      "existing": false
+    },
+    "PackedDataExpand": {
+      "target": "BBDistance.Bravyi360.PackedDataExpand",
+      "existing": false
+    },
+    "BottomForestFastPart1": {
+      "target": "BBDistance.Bravyi360.BottomForestFastPart1",
+      "existing": false
+    },
+    "BottomForestFastPart2": {
+      "target": "BBDistance.Bravyi360.BottomForestFastPart2",
+      "existing": false
+    },
+    "BottomForestFastPart3": {
+      "target": "BBDistance.Bravyi360.BottomForestFastPart3",
+      "existing": false
+    },
+    "BottomForestFastPart4": {
+      "target": "BBDistance.Bravyi360.BottomForestFastPart4",
+      "existing": false
+    },
+    "BottomForestFastPart5": {
+      "target": "BBDistance.Bravyi360.BottomForestFastPart5",
+      "existing": false
+    },
+    "BottomForestFastPart6": {
+      "target": "BBDistance.Bravyi360.BottomForestFastPart6",
+      "existing": false
+    },
+    "BottomForestFastPart7": {
+      "target": "BBDistance.Bravyi360.BottomForestFastPart7",
+      "existing": false
+    },
+    "BottomForestFastPart8": {
+      "target": "BBDistance.Bravyi360.BottomForestFastPart8",
+      "existing": false
+    },
+    "BottomForestFastPart9": {
+      "target": "BBDistance.Bravyi360.BottomForestFastPart9",
+      "existing": false
+    },
+    "BottomForestFastPart10": {
+      "target": "BBDistance.Bravyi360.BottomForestFastPart10",
+      "existing": false
+    },
+    "BottomForestFastPart11": {
+      "target": "BBDistance.Bravyi360.BottomForestFastPart11",
+      "existing": false
+    },
+    "BottomForestFastPart12": {
+      "target": "BBDistance.Bravyi360.BottomForestFastPart12",
+      "existing": false
+    },
+    "BottomForestFastPart13": {
+      "target": "BBDistance.Bravyi360.BottomForestFastPart13",
+      "existing": false
+    },
+    "PackedListLookup": {
+      "target": "BBDistance.Certificate.PackedListLookup",
+      "existing": false
+    },
+    "Bravyi360BottomEmptyData": {
+      "target": "BBDistance.Bravyi360.BottomEmptyData",
+      "existing": false
+    },
+    "BottomShallowLinkPart1": {
+      "target": "BBDistance.Bravyi360.BottomShallowLinkPart1",
+      "existing": false
+    },
+    "BottomShallowLinkPart2": {
+      "target": "BBDistance.Bravyi360.BottomShallowLinkPart2",
+      "existing": false
+    },
+    "BottomShallowLinkPart3": {
+      "target": "BBDistance.Bravyi360.BottomShallowLinkPart3",
+      "existing": false
+    },
+    "BottomShallowLinkPart4": {
+      "target": "BBDistance.Bravyi360.BottomShallowLinkPart4",
+      "existing": false
+    },
+    "BottomShallowLinkPart5": {
+      "target": "BBDistance.Bravyi360.BottomShallowLinkPart5",
+      "existing": false
+    },
+    "BottomShallowLinkPart6": {
+      "target": "BBDistance.Bravyi360.BottomShallowLinkPart6",
+      "existing": false
+    },
+    "BottomShallowLinkPart7": {
+      "target": "BBDistance.Bravyi360.BottomShallowLinkPart7",
+      "existing": false
+    },
+    "BottomShallowLinkPart8": {
+      "target": "BBDistance.Bravyi360.BottomShallowLinkPart8",
+      "existing": false
+    },
+    "Bravyi360BottomEmpty0": {
+      "target": "BBDistance.Bravyi360.BottomEmpty0",
+      "existing": false
+    },
+    "Bravyi360DualData": {
+      "target": "BBDistance.Bravyi360.DualData",
+      "existing": false
+    },
+    "BatchDualRaw": {
+      "target": "BBDistance.Certificate.BatchDualRaw",
+      "existing": false
+    },
+    "BatchDualSemantics": {
+      "target": "BBDistance.Certificate.BatchDualSemantics",
+      "existing": false
+    },
+    "BatchParity": {
+      "target": "BBDistance.Certificate.BatchParity",
+      "existing": false
+    },
+    "OutsideMaskBounds": {
+      "target": "BBDistance.Certificate.OutsideMaskBounds",
+      "existing": false
+    },
+    "Bravyi360BottomEmpty1": {
+      "target": "BBDistance.Bravyi360.BottomEmpty1",
+      "existing": false
+    },
+    "BatchCap1Raw": {
+      "target": "BBDistance.Bravyi360.BatchCap1Raw",
+      "existing": false
+    },
+    "BatchCap1": {
+      "target": "BBDistance.Certificate.BatchCap1",
+      "existing": false
+    },
+    "Cap1Scalar": {
+      "target": "BBDistance.Certificate.Cap1Scalar",
+      "existing": false
+    },
+    "DualConstraints": {
+      "target": "BBDistance.Bravyi360.DualConstraints",
+      "existing": false
+    },
+    "Bravyi360BottomEmpty2": {
+      "target": "BBDistance.Bravyi360.BottomEmpty2",
+      "existing": false
+    },
+    "Bravyi360BottomEmpty2Batch": {
+      "target": "BBDistance.Bravyi360.BottomEmpty2Batch",
+      "existing": false
+    },
+    "Bravyi360BottomEmpty2BatchData0": {
+      "target": "BBDistance.Bravyi360.BottomEmpty2BatchData0",
+      "existing": false
+    },
+    "BottomEmptyTwoBatch": {
+      "target": "BBDistance.Bravyi360.BottomEmptyTwoBatch",
+      "existing": false
+    },
+    "BottomCap1Cover": {
+      "target": "BBDistance.Bravyi360.BottomCap1Cover",
+      "existing": false
+    },
+    "Cap1List": {
+      "target": "BBDistance.Bravyi360.Cap1List",
+      "existing": false
+    },
+    "DualPlaneCertificate": {
+      "target": "BBDistance.Bravyi360.DualPlaneCertificate",
+      "existing": false
+    },
+    "PairPlaneCoverage": {
+      "target": "BBDistance.Certificate.PairPlaneCoverage",
+      "existing": false
+    },
+    "PairMaskBasics": {
+      "target": "BBDistance.Certificate.PairMaskBasics",
+      "existing": false
+    },
+    "BitDilation": {
+      "target": "BBDistance.Certificate.BitDilation",
+      "existing": false
+    },
+    "BitPlaneFilter": {
+      "target": "BBDistance.Certificate.BitPlaneFilter",
+      "existing": false
+    },
+    "CapTwoFast": {
+      "target": "BBDistance.Certificate.CapTwoFast",
+      "existing": false
+    },
+    "Bravyi360PairTables": {
+      "target": "BBDistance.Bravyi360.PairTables",
+      "existing": false
+    },
+    "Bravyi360BottomEmpty2BatchData1": {
+      "target": "BBDistance.Bravyi360.BottomEmpty2BatchData1",
+      "existing": false
+    },
+    "Bravyi360BottomEmpty2BatchData2": {
+      "target": "BBDistance.Bravyi360.BottomEmpty2BatchData2",
+      "existing": false
+    },
+    "Bravyi360BottomEmpty2BatchData3": {
+      "target": "BBDistance.Bravyi360.BottomEmpty2BatchData3",
+      "existing": false
+    },
+    "Bravyi360BottomEmpty2BatchData4": {
+      "target": "BBDistance.Bravyi360.BottomEmpty2BatchData4",
+      "existing": false
+    },
+    "Bravyi360BottomEmpty2BatchData5": {
+      "target": "BBDistance.Bravyi360.BottomEmpty2BatchData5",
+      "existing": false
+    },
+    "Bravyi360BottomEmpty2BatchData6": {
+      "target": "BBDistance.Bravyi360.BottomEmpty2BatchData6",
+      "existing": false
+    },
+    "Bravyi360BottomEmpty2BatchData7": {
+      "target": "BBDistance.Bravyi360.BottomEmpty2BatchData7",
+      "existing": false
+    },
+    "Bravyi360BottomEmpty2BatchData8": {
+      "target": "BBDistance.Bravyi360.BottomEmpty2BatchData8",
+      "existing": false
+    },
+    "Bravyi360BottomEmptyWeights": {
+      "target": "BBDistance.Bravyi360.BottomEmptyWeights",
+      "existing": false
+    },
+    "BatchWidePopcount": {
+      "target": "BBDistance.Certificate.BatchWidePopcount",
+      "existing": false
+    },
+    "Bravyi360BottomPositiveComplete": {
+      "target": "BBDistance.Bravyi360.BottomPositiveComplete",
+      "existing": false
+    },
+    "Bravyi360BottomPositiveOne": {
+      "target": "BBDistance.Bravyi360.BottomPositiveOne",
+      "existing": false
+    },
+    "BottomPositiveOnePart0": {
+      "target": "BBDistance.Bravyi360.BottomPositiveOnePart0",
+      "existing": false
+    },
+    "BottomPositiveOnePart1": {
+      "target": "BBDistance.Bravyi360.BottomPositiveOnePart1",
+      "existing": false
+    },
+    "BottomPositiveOnePart2": {
+      "target": "BBDistance.Bravyi360.BottomPositiveOnePart2",
+      "existing": false
+    },
+    "BottomPositiveOnePart3": {
+      "target": "BBDistance.Bravyi360.BottomPositiveOnePart3",
+      "existing": false
+    },
+    "BottomPositiveOnePart4": {
+      "target": "BBDistance.Bravyi360.BottomPositiveOnePart4",
+      "existing": false
+    },
+    "BottomPositiveOnePart5": {
+      "target": "BBDistance.Bravyi360.BottomPositiveOnePart5",
+      "existing": false
+    },
+    "BottomPositiveOnePart6": {
+      "target": "BBDistance.Bravyi360.BottomPositiveOnePart6",
+      "existing": false
+    },
+    "BottomPositiveOnePart7": {
+      "target": "BBDistance.Bravyi360.BottomPositiveOnePart7",
+      "existing": false
+    },
+    "BottomPositiveOnePart8": {
+      "target": "BBDistance.Bravyi360.BottomPositiveOnePart8",
+      "existing": false
+    },
+    "BottomPositiveOnePart9": {
+      "target": "BBDistance.Bravyi360.BottomPositiveOnePart9",
+      "existing": false
+    },
+    "BottomPositiveOnePart10": {
+      "target": "BBDistance.Bravyi360.BottomPositiveOnePart10",
+      "existing": false
+    },
+    "BottomPositiveOnePart11": {
+      "target": "BBDistance.Bravyi360.BottomPositiveOnePart11",
+      "existing": false
+    },
+    "BottomPositiveOnePart12": {
+      "target": "BBDistance.Bravyi360.BottomPositiveOnePart12",
+      "existing": false
+    },
+    "BottomPositiveOnePart13": {
+      "target": "BBDistance.Bravyi360.BottomPositiveOnePart13",
+      "existing": false
+    },
+    "Bravyi360BottomPositiveTwo": {
+      "target": "BBDistance.Bravyi360.BottomPositiveTwo",
+      "existing": false
+    },
+    "BottomPositiveTwoPart0": {
+      "target": "BBDistance.Bravyi360.BottomPositiveTwoPart0",
+      "existing": false
+    },
+    "BottomCap2Cover": {
+      "target": "BBDistance.Bravyi360.BottomCap2Cover",
+      "existing": false
+    },
+    "BottomPositiveTwoPart1": {
+      "target": "BBDistance.Bravyi360.BottomPositiveTwoPart1",
+      "existing": false
+    },
+    "BottomPositiveTwoPart2": {
+      "target": "BBDistance.Bravyi360.BottomPositiveTwoPart2",
+      "existing": false
+    },
+    "BottomPositiveTwoPart3": {
+      "target": "BBDistance.Bravyi360.BottomPositiveTwoPart3",
+      "existing": false
+    },
+    "BottomPositiveTwoPart4": {
+      "target": "BBDistance.Bravyi360.BottomPositiveTwoPart4",
+      "existing": false
+    },
+    "BottomPositiveTwoPart5": {
+      "target": "BBDistance.Bravyi360.BottomPositiveTwoPart5",
+      "existing": false
+    },
+    "BottomPositiveTwoPart6": {
+      "target": "BBDistance.Bravyi360.BottomPositiveTwoPart6",
+      "existing": false
+    },
+    "BottomPositiveTwoPart7": {
+      "target": "BBDistance.Bravyi360.BottomPositiveTwoPart7",
+      "existing": false
+    },
+    "BottomPositiveTwoPart8": {
+      "target": "BBDistance.Bravyi360.BottomPositiveTwoPart8",
+      "existing": false
+    },
+    "BottomPositiveTwoPart9": {
+      "target": "BBDistance.Bravyi360.BottomPositiveTwoPart9",
+      "existing": false
+    },
+    "BottomPositiveTwoPart10": {
+      "target": "BBDistance.Bravyi360.BottomPositiveTwoPart10",
+      "existing": false
+    },
+    "BottomPositiveTwoPart11": {
+      "target": "BBDistance.Bravyi360.BottomPositiveTwoPart11",
+      "existing": false
+    },
+    "BottomPositiveTwoPart12": {
+      "target": "BBDistance.Bravyi360.BottomPositiveTwoPart12",
+      "existing": false
+    },
+    "BottomPositiveTwoPart13": {
+      "target": "BBDistance.Bravyi360.BottomPositiveTwoPart13",
+      "existing": false
+    },
+    "Bravyi360BottomHighSearchComplete": {
+      "target": "BBDistance.Bravyi360.BottomHighSearchComplete",
+      "existing": false
+    },
+    "BottomHighSearchPart0": {
+      "target": "BBDistance.Bravyi360.BottomHighSearchPart0",
+      "existing": false
+    },
+    "BottomHighSearchSupport": {
+      "target": "BBDistance.Bravyi360.BottomHighSearchSupport",
+      "existing": false
+    },
+    "SearchCertificate": {
+      "target": "BBDistance.Certificate.SearchCertificate",
+      "existing": false
+    },
+    "BottomHighSearchPart1": {
+      "target": "BBDistance.Bravyi360.BottomHighSearchPart1",
+      "existing": false
+    },
+    "BottomHighSearchPart2": {
+      "target": "BBDistance.Bravyi360.BottomHighSearchPart2",
+      "existing": false
+    },
+    "BottomHighSearchPart3": {
+      "target": "BBDistance.Bravyi360.BottomHighSearchPart3",
+      "existing": false
+    },
+    "BottomHighSearchPart4": {
+      "target": "BBDistance.Bravyi360.BottomHighSearchPart4",
+      "existing": false
+    },
+    "BottomHighSearchPart5": {
+      "target": "BBDistance.Bravyi360.BottomHighSearchPart5",
+      "existing": false
+    },
+    "BottomHighSearchPart6": {
+      "target": "BBDistance.Bravyi360.BottomHighSearchPart6",
+      "existing": false
+    },
+    "BottomHighSearchPart7": {
+      "target": "BBDistance.Bravyi360.BottomHighSearchPart7",
+      "existing": false
+    },
+    "BottomHighSearchPart8": {
+      "target": "BBDistance.Bravyi360.BottomHighSearchPart8",
+      "existing": false
+    },
+    "BottomHighSearchPart9": {
+      "target": "BBDistance.Bravyi360.BottomHighSearchPart9",
+      "existing": false
+    },
+    "BottomHighSearchPart10": {
+      "target": "BBDistance.Bravyi360.BottomHighSearchPart10",
+      "existing": false
+    },
+    "BottomHighSearchPart11": {
+      "target": "BBDistance.Bravyi360.BottomHighSearchPart11",
+      "existing": false
+    },
+    "BottomHighSearchPart12": {
+      "target": "BBDistance.Bravyi360.BottomHighSearchPart12",
+      "existing": false
+    },
+    "BottomHighSearchPart13": {
+      "target": "BBDistance.Bravyi360.BottomHighSearchPart13",
+      "existing": false
+    },
+    "DeepFiberComplete": {
+      "target": "BBDistance.Bravyi360.DeepFiberComplete",
+      "existing": false
+    },
+    "DeepFlatComplete": {
+      "target": "BBDistance.Bravyi360.DeepFlatComplete",
+      "existing": false
+    },
+    "DeepFlatBridge": {
+      "target": "BBDistance.Bravyi360.DeepFlatBridge",
+      "existing": false
+    },
+    "DeepFlatReduction": {
+      "target": "BBDistance.Bravyi360.DeepFlatReduction",
+      "existing": false
+    },
+    "FlatLift": {
+      "target": "QEC.Stabilizer.Framework.Homological.BBFlatLift",
+      "existing": true
+    },
+    "Bravyi360BaseFloor": {
+      "target": "BBDistance.Bravyi360.BaseFloor",
+      "existing": false
+    },
+    "Bravyi360BaseFloorChecks": {
+      "target": "BBDistance.Bravyi360.BaseFloorChecks",
+      "existing": false
+    },
+    "Bravyi360BaseSparse": {
+      "target": "BBDistance.Bravyi360.BaseSparse",
+      "existing": false
+    },
+    "BaseCycleCensus": {
+      "target": "BBDistance.Bravyi360.BaseCycleCensus",
+      "existing": false
+    },
+    "ConcreteKernelSpan": {
+      "target": "BBDistance.Bravyi360.ConcreteKernelSpan",
+      "existing": false
+    },
+    "SortedCensus": {
+      "target": "BBDistance.Certificate.SortedCensus",
+      "existing": false
+    },
+    "MaskSpan": {
+      "target": "BBDistance.Certificate.MaskSpan",
+      "existing": false
+    },
+    "LowCycleCensusNormalization": {
+      "target": "BBDistance.Bravyi360.LowCycleCensusNormalization",
+      "existing": false
+    },
+    "LowCycleNormalization": {
+      "target": "BBDistance.Bravyi360.LowCycleNormalization",
+      "existing": false
+    },
+    "Bravyi360BottomBoundarySheets": {
+      "target": "BBDistance.Bravyi360.BottomBoundarySheets",
+      "existing": false
+    },
+    "Bravyi360BottomBoundarySheetsData": {
+      "target": "BBDistance.Bravyi360.BottomBoundarySheetsData",
+      "existing": false
+    },
+    "MaskSparseSheets": {
+      "target": "BBDistance.Certificate.MaskSparseSheets",
+      "existing": false
+    },
+    "Bravyi360DeepFlatData": {
+      "target": "BBDistance.Bravyi360.DeepFlatData",
+      "existing": false
+    },
+    "Bravyi360DeepFlatChecks": {
+      "target": "BBDistance.Bravyi360.DeepFlatChecks",
+      "existing": false
+    },
+    "Bravyi360DeepFlatPart0": {
+      "target": "BBDistance.Bravyi360.DeepFlatPart0",
+      "existing": false
+    },
+    "Bravyi360DeepFlatBatch": {
+      "target": "BBDistance.Bravyi360.DeepFlatBatch",
+      "existing": false
+    },
+    "Bravyi360DeepFlatPart1": {
+      "target": "BBDistance.Bravyi360.DeepFlatPart1",
+      "existing": false
+    },
+    "Bravyi360DeepFlatPart2": {
+      "target": "BBDistance.Bravyi360.DeepFlatPart2",
+      "existing": false
+    },
+    "Bravyi360DeepFlatPart3": {
+      "target": "BBDistance.Bravyi360.DeepFlatPart3",
+      "existing": false
+    },
+    "Bravyi360DeepFlatPart4": {
+      "target": "BBDistance.Bravyi360.DeepFlatPart4",
+      "existing": false
+    },
+    "DeepExceptionalBridge": {
+      "target": "BBDistance.Bravyi360.DeepExceptionalBridge",
+      "existing": false
+    },
+    "DeepBank": {
+      "target": "BBDistance.Bravyi360.DeepBank",
+      "existing": false
+    },
+    "DeepCensusData": {
+      "target": "BBDistance.Bravyi360.DeepCensusData",
+      "existing": false
+    },
+    "AffineMaskCheck": {
+      "target": "BBDistance.Certificate.AffineMaskCheck",
+      "existing": false
+    },
+    "AffineExceptions": {
+      "target": "BBDistance.Bravyi360.AffineExceptions",
+      "existing": false
+    },
+    "AffineInitialExceptions": {
+      "target": "BBDistance.Bravyi360.AffineInitialExceptions",
+      "existing": false
+    },
+    "AffineInitialCommon": {
+      "target": "BBDistance.Bravyi360.AffineInitialCommon",
+      "existing": false
+    },
+    "AffineSearchExceptions": {
+      "target": "BBDistance.Bravyi360.AffineSearchExceptions",
+      "existing": false
+    },
+    "Bravyi360TopComplete": {
+      "target": "BBDistance.Bravyi360.TopComplete",
+      "existing": false
+    },
+    "Bravyi360TopAssembly": {
+      "target": "BBDistance.Bravyi360.TopAssembly",
+      "existing": false
+    },
+    "Bravyi360TopCaseChecks": {
+      "target": "BBDistance.Bravyi360.TopCaseChecks",
+      "existing": false
+    },
+    "Bravyi360TopCasePart0": {
+      "target": "BBDistance.Bravyi360.TopCasePart0",
+      "existing": false
+    },
+    "Bravyi360TopCaseCheck": {
+      "target": "BBDistance.Bravyi360.TopCaseCheck",
+      "existing": false
+    },
+    "Bravyi360TopCaseData": {
+      "target": "BBDistance.Bravyi360.TopCaseData",
+      "existing": false
+    },
+    "Bravyi360TopFlatChecks": {
+      "target": "BBDistance.Bravyi360.TopFlatChecks",
+      "existing": false
+    },
+    "Bravyi360TopBoundarySheetsData": {
+      "target": "BBDistance.Bravyi360.TopBoundarySheetsData",
+      "existing": false
+    },
+    "Bravyi360TopEmptyData": {
+      "target": "BBDistance.Bravyi360.TopEmptyData",
+      "existing": false
+    },
+    "Bravyi360TopCasePart1": {
+      "target": "BBDistance.Bravyi360.TopCasePart1",
+      "existing": false
+    },
+    "Bravyi360TopCasePart2": {
+      "target": "BBDistance.Bravyi360.TopCasePart2",
+      "existing": false
+    },
+    "Bravyi360TopCasePart3": {
+      "target": "BBDistance.Bravyi360.TopCasePart3",
+      "existing": false
+    },
+    "Bravyi360TopCasePart4": {
+      "target": "BBDistance.Bravyi360.TopCasePart4",
+      "existing": false
+    },
+    "Bravyi360TopCasePart5": {
+      "target": "BBDistance.Bravyi360.TopCasePart5",
+      "existing": false
+    },
+    "Bravyi360TopFlat": {
+      "target": "BBDistance.Bravyi360.TopFlat",
+      "existing": false
+    },
+    "Bravyi360TopBoundarySheets": {
+      "target": "BBDistance.Bravyi360.TopBoundarySheets",
+      "existing": false
+    },
+    "Bravyi360TopFiberBridge": {
+      "target": "BBDistance.Bravyi360.TopFiberBridge",
+      "existing": false
+    },
+    "TopFiberBoundary": {
+      "target": "BBDistance.Bravyi360.TopFiberBoundary",
+      "existing": false
+    },
+    "AffineFastMaps": {
+      "target": "BBDistance.Bravyi360.AffineFastMaps",
+      "existing": false
+    },
+    "Bravyi360MiddleFloor": {
+      "target": "BBDistance.Bravyi360.MiddleFloor",
+      "existing": false
+    },
+    "Bravyi360MiddleEmpty": {
+      "target": "BBDistance.Bravyi360.MiddleEmpty",
+      "existing": false
+    },
+    "Bravyi360MiddleFloorData": {
+      "target": "BBDistance.Bravyi360.MiddleFloorData",
+      "existing": false
+    },
+    "Bravyi360MiddleFlat": {
+      "target": "BBDistance.Bravyi360.MiddleFlat",
+      "existing": false
+    },
+    "Bravyi360Assembly": {
+      "target": "BBDistance.Bravyi360.Assembly",
+      "existing": false
+    },
+    "TopNonempty": {
+      "target": "BBDistance.Bravyi360.TopNonempty",
+      "existing": false
+    },
+    "TopNonemptyPart0Cached": {
+      "target": "BBDistance.Bravyi360.TopNonemptyPart0Cached",
+      "existing": false
+    },
+    "AffineInitialPart0": {
+      "target": "BBDistance.Bravyi360.AffineInitialPart0",
+      "existing": false
+    },
+    "AffineSearchPart0": {
+      "target": "BBDistance.Bravyi360.AffineSearchPart0",
+      "existing": false
+    },
+    "AffineBoundaryCachedPart0": {
+      "target": "BBDistance.Bravyi360.AffineBoundaryCachedPart0",
+      "existing": false
+    },
+    "AffineColumnCache": {
+      "target": "BBDistance.Bravyi360.AffineColumnCache",
+      "existing": false
+    },
+    "AffineCachedColumns": {
+      "target": "BBDistance.Certificate.AffineCachedColumns",
+      "existing": false
+    },
+    "AffineBatchBoundary": {
+      "target": "BBDistance.Certificate.AffineBatchBoundary",
+      "existing": false
+    },
+    "Bravyi360DiagonalData": {
+      "target": "BBDistance.Bravyi360.DiagonalData",
+      "existing": false
+    },
+    "AffineBoundaryGroup0": {
+      "target": "BBDistance.Bravyi360.AffineBoundaryGroup0",
+      "existing": false
+    },
+    "AffineBoundaryMaps": {
+      "target": "BBDistance.Bravyi360.AffineBoundaryMaps",
+      "existing": false
+    },
+    "PackedSlice": {
+      "target": "BBDistance.Certificate.PackedSlice",
+      "existing": false
+    },
+    "TopNonemptyPart1Cached": {
+      "target": "BBDistance.Bravyi360.TopNonemptyPart1Cached",
+      "existing": false
+    },
+    "AffineInitialPart1": {
+      "target": "BBDistance.Bravyi360.AffineInitialPart1",
+      "existing": false
+    },
+    "AffineSearchPart1": {
+      "target": "BBDistance.Bravyi360.AffineSearchPart1",
+      "existing": false
+    },
+    "AffineBoundaryCachedPart1": {
+      "target": "BBDistance.Bravyi360.AffineBoundaryCachedPart1",
+      "existing": false
+    },
+    "AffineBoundaryGroup1": {
+      "target": "BBDistance.Bravyi360.AffineBoundaryGroup1",
+      "existing": false
+    },
+    "TopNonemptyPart2Cached": {
+      "target": "BBDistance.Bravyi360.TopNonemptyPart2Cached",
+      "existing": false
+    },
+    "AffineInitialPart2": {
+      "target": "BBDistance.Bravyi360.AffineInitialPart2",
+      "existing": false
+    },
+    "AffineSearchPart2": {
+      "target": "BBDistance.Bravyi360.AffineSearchPart2",
+      "existing": false
+    },
+    "AffineBoundaryCachedPart2": {
+      "target": "BBDistance.Bravyi360.AffineBoundaryCachedPart2",
+      "existing": false
+    },
+    "AffineBoundaryGroup2": {
+      "target": "BBDistance.Bravyi360.AffineBoundaryGroup2",
+      "existing": false
+    },
+    "TopNonemptyPart3Cached": {
+      "target": "BBDistance.Bravyi360.TopNonemptyPart3Cached",
+      "existing": false
+    },
+    "AffineInitialPart3": {
+      "target": "BBDistance.Bravyi360.AffineInitialPart3",
+      "existing": false
+    },
+    "AffineSearchPart3": {
+      "target": "BBDistance.Bravyi360.AffineSearchPart3",
+      "existing": false
+    },
+    "AffineBoundaryCachedPart3": {
+      "target": "BBDistance.Bravyi360.AffineBoundaryCachedPart3",
+      "existing": false
+    },
+    "AffineBoundaryGroup3": {
+      "target": "BBDistance.Bravyi360.AffineBoundaryGroup3",
+      "existing": false
+    },
+    "TopNonemptyPart4Cached": {
+      "target": "BBDistance.Bravyi360.TopNonemptyPart4Cached",
+      "existing": false
+    },
+    "AffineInitialPart4": {
+      "target": "BBDistance.Bravyi360.AffineInitialPart4",
+      "existing": false
+    },
+    "AffineSearchPart4": {
+      "target": "BBDistance.Bravyi360.AffineSearchPart4",
+      "existing": false
+    },
+    "AffineBoundaryCachedPart4": {
+      "target": "BBDistance.Bravyi360.AffineBoundaryCachedPart4",
+      "existing": false
+    },
+    "AffineBoundaryGroup4": {
+      "target": "BBDistance.Bravyi360.AffineBoundaryGroup4",
+      "existing": false
+    },
+    "TopNonemptyPart5Cached": {
+      "target": "BBDistance.Bravyi360.TopNonemptyPart5Cached",
+      "existing": false
+    },
+    "AffineInitialPart5": {
+      "target": "BBDistance.Bravyi360.AffineInitialPart5",
+      "existing": false
+    },
+    "AffineSearchPart5": {
+      "target": "BBDistance.Bravyi360.AffineSearchPart5",
+      "existing": false
+    },
+    "AffineBoundaryCachedPart5": {
+      "target": "BBDistance.Bravyi360.AffineBoundaryCachedPart5",
+      "existing": false
+    },
+    "AffineBoundaryGroup5": {
+      "target": "BBDistance.Bravyi360.AffineBoundaryGroup5",
+      "existing": false
+    },
+    "TopNonemptyPart6Cached": {
+      "target": "BBDistance.Bravyi360.TopNonemptyPart6Cached",
+      "existing": false
+    },
+    "AffineInitialPart6": {
+      "target": "BBDistance.Bravyi360.AffineInitialPart6",
+      "existing": false
+    },
+    "AffineSearchPart6": {
+      "target": "BBDistance.Bravyi360.AffineSearchPart6",
+      "existing": false
+    },
+    "AffineBoundaryCachedPart6": {
+      "target": "BBDistance.Bravyi360.AffineBoundaryCachedPart6",
+      "existing": false
+    },
+    "AffineBoundaryGroup6": {
+      "target": "BBDistance.Bravyi360.AffineBoundaryGroup6",
+      "existing": false
+    },
+    "Bravyi360TopEmpty0": {
+      "target": "BBDistance.Bravyi360.TopEmpty0",
+      "existing": false
+    },
+    "Bravyi360TopEmpty1": {
+      "target": "BBDistance.Bravyi360.TopEmpty1",
+      "existing": false
+    },
+    "Bravyi360TopEmpty2": {
+      "target": "BBDistance.Bravyi360.TopEmpty2",
+      "existing": false
+    },
+    "Bravyi360TopEmpty2Data": {
+      "target": "BBDistance.Bravyi360.TopEmpty2Data",
+      "existing": false
+    },
+    "Bravyi360DiagonalComplete": {
+      "target": "BBDistance.Bravyi360.DiagonalComplete",
+      "existing": false
+    },
+    "Bravyi360Diagonal": {
+      "target": "BBDistance.Bravyi360.Diagonal",
+      "existing": false
+    },
+    "Bravyi360DiagonalEmpty": {
+      "target": "BBDistance.Bravyi360.DiagonalEmpty",
+      "existing": false
+    },
+    "Bravyi360DiagonalBatch": {
+      "target": "BBDistance.Bravyi360.DiagonalBatch",
+      "existing": false
+    },
+    "Bravyi360DiagonalFlat": {
+      "target": "BBDistance.Bravyi360.DiagonalFlat",
+      "existing": false
+    },
+    "Bravyi360NonzeroAssembly": {
+      "target": "BBDistance.Bravyi360.NonzeroAssembly",
+      "existing": false
+    },
+    "Bravyi360Reachability": {
+      "target": "BBDistance.Bravyi360.Reachability",
+      "existing": false
+    },
+    "Bravyi360ReachabilityChecks": {
+      "target": "BBDistance.Bravyi360.ReachabilityChecks",
+      "existing": false
+    }
+  }
+}
