@@ -127,10 +127,10 @@
       "type": "git",
       "subDir": null,
       "scope": "",
-      "rev": "f51011bd6d1af9e225a19a5d5ff672000f3c9d94",
+      "rev": "b5a9f13d17b656091bf95024be8ebaf457d2c3a6",
       "name": "QEC",
       "manifestFile": "lake-manifest.json",
-      "inputRev": "f51011bd6d1af9e225a19a5d5ff672000f3c9d94",
+      "inputRev": "b5a9f13d17b656091bf95024be8ebaf457d2c3a6",
       "inherited": false,
       "configFile": "lakefile.toml"
     }

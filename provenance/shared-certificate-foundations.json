@@ -1,0 +1,54 @@
+{
+  "source_repository": "https://github.com/Stavan-Jain/bb-distance-lean",
+  "source_revision": "a83cafad4d041427af4ddb54085493d3f9dd02d2",
+  "canonical_repository": "https://github.com/Stavan-Jain/QECLean",
+  "canonical_revision": "Pinned by lakefile.toml and lake-manifest.json",
+  "reason": "BB and mitten share declaration namespaces. Import-only compatibility modules retain existing import paths while ensuring one canonical set of declarations.",
+  "modules": [
+    {
+      "compatibility_module": "BBDistance.Certificate.PackedDigits",
+      "canonical_module": "QEC.Stabilizer.Framework.Homological.Certificate.PackedDigits",
+      "original_sha256": "d3c9452216680ec6760f1c3c37384cac7d48e8eef1dede7903e249002ce0950e"
+    },
+    {
+      "compatibility_module": "BBDistance.Certificate.OrbitPackedExtra",
+      "canonical_module": "QEC.Stabilizer.Framework.Homological.Certificate.OrbitPackedExtra",
+      "original_sha256": "c8d19a9c64aab38dbdaf7b57d858a8daba3de1b594db016dbd66b4be1ef53a53"
+    },
+    {
+      "compatibility_module": "BBDistance.Certificate.PackedLaneShifts",
+      "canonical_module": "QEC.Stabilizer.Framework.Homological.Certificate.PackedLaneShifts",
+      "original_sha256": "4fee3a449fa4510d039832aa193429d025803a98400d30e2928337108fe7caff"
+    },
+    {
+      "compatibility_module": "BBDistance.Certificate.PackedPopcount",
+      "canonical_module": "QEC.Stabilizer.Framework.Homological.Certificate.PackedPopcount",
+      "original_sha256": "dbdf0a65690839ef0aeb6c8859d73640031816829a3a0ab252f6b1186f9e2c62"
+    },
+    {
+      "compatibility_module": "BBDistance.Certificate.PackedEquality",
+      "canonical_module": "QEC.Stabilizer.Framework.Homological.Certificate.PackedEquality",
+      "original_sha256": "aa58aaeb66fff74af6e93dac52048cf168b84920150b097d7e87f89b0558dee9"
+    },
+    {
+      "compatibility_module": "BBDistance.Certificate.MaskLinear",
+      "canonical_module": "QEC.Stabilizer.Framework.Homological.Certificate.MaskLinear",
+      "original_sha256": "3baa76f743007164e492fb9d0c8f11666872e78e067096e96dce8918312d5ec1"
+    },
+    {
+      "compatibility_module": "BBDistance.Certificate.BatchLinear",
+      "canonical_module": "QEC.Stabilizer.Framework.Homological.Certificate.BatchLinear",
+      "original_sha256": "0f586595c9aca246058caeb574d9bd013e824d2aa1cbd48b93f5bc75e10da25f"
+    },
+    {
+      "compatibility_module": "BBDistance.Certificate.PackedListCertificate",
+      "canonical_module": "QEC.Stabilizer.Framework.Homological.Certificate.PackedListCertificate",
+      "original_sha256": "d7eb0b05de6edf9fb8bd1df96e823b759690ba3ccf1d0744422be648261cbaf1"
+    }
+  ],
+  "proof_adapter": {
+    "file": "BBDistance/Certificate/BatchListBinary.lean",
+    "reason": "packList now computes by shift recursion; rewrite with packList_eq_ofDigits before unfolding packF."
+  },
+  "historical_provenance": "module-migration.json and original-validation remain unchanged."
+}

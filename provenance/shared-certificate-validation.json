@@ -1,0 +1,32 @@
+{
+  "qeclean_revision": "b5a9f13d17b656091bf95024be8ebaf457d2c3a6",
+  "checks": [
+    {
+      "check": "certificates-build",
+      "returncode": 0,
+      "seconds": 107.56
+    },
+    {
+      "check": "shared-api",
+      "returncode": 0,
+      "seconds": 3.64
+    }
+  ],
+  "combined_import": {
+    "status": "passed",
+    "imports": [
+      "MittenDistance",
+      "BBDistance.Certificate"
+    ],
+    "mitten_revision": "bc0329a2ac763006645db867bf2b3c7f892fe7ab",
+    "distance_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "python_tests_passed": 13,
+  "regenerated_gross_modules": 2,
+  "regenerated_bravyi360_modules": 192,
+  "scope": "Generic certificate library and combined imports checked locally; full concrete BB source checking runs in CI."
+}

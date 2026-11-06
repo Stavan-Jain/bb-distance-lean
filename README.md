@@ -8,9 +8,9 @@ its proof, checked certificates, and deterministic generators together.
 ## Dependency and build
 
 QECLean is pinned to commit
-[`f51011bd6d1af9e225a19a5d5ff672000f3c9d94`](https://github.com/Stavan-Jain/QECLean/commit/f51011bd6d1af9e225a19a5d5ff672000f3c9d94)
-in both `lakefile.toml` and `lake-manifest.json`. This is the foundations commit
-on [QECLean PR #97](https://github.com/Stavan-Jain/QECLean/pull/97), rather than a
+[`b5a9f13d17b656091bf95024be8ebaf457d2c3a6`](https://github.com/Stavan-Jain/QECLean/commit/b5a9f13d17b656091bf95024be8ebaf457d2c3a6)
+in both `lakefile.toml` and `lake-manifest.json`. This is the shared certificate foundations commit
+on [QECLean PR #102](https://github.com/Stavan-Jain/QECLean/pull/102), rather than a
 moving branch or a released version. Lean is pinned to `v4.30.0-rc2`; all
 transitive dependencies are locked in the manifest.
 
@@ -24,6 +24,7 @@ LEAN_NUM_THREADS=1 lake build
 lake env lean scripts/AxiomCheck.lean
 lake env lean scripts/PublicApi.lean
 lake env lean scripts/GrossCheck.lean
+lake env lean scripts/SharedCertificateCheck.lean
 ```
 
 The certificate build is substantial. Keep `LEAN_NUM_THREADS=1` to limit memory
@@ -68,11 +69,18 @@ The declaration namespace is preserved from QECLean; the import root is now
   kernel replay.
 
 QECLean supplies the quantum-code definitions, homological BB framework, binary
-mask API, and general cover results. The extraction retains only five additional
-mathematical foundations there: flat-lift reductions, trimming redundant checks,
-dual-witness soundness, and the ordinary and indexed orbit-census principles.
-The larger search and certificate implementation lives here. New work should
-reuse QECLean's definitions and APIs rather than copy them.
+mask API, and general cover results. It also owns flat-lift reductions, trimming
+redundant checks, dual-witness soundness, and the ordinary and indexed
+orbit-census principles.
+
+The packed-arithmetic helpers shared with
+[mitten-distance-lean](https://github.com/Stavan-Jain/mitten-distance-lean) now
+have one canonical implementation in QECLean. Eight modules under
+`BBDistance/Certificate/` preserve their import paths as import-only
+compatibility modules. Their declaration namespaces remain unchanged, allowing
+both downstream packages to reuse the same API. The larger search and
+certificate implementation lives here. New work should reuse QECLean's
+definitions and APIs rather than copy them.
 
 ## Reproduction and verification
 
@@ -112,5 +120,9 @@ and build tooling were adapted to this repository.
 [Original validation evidence](provenance/original-validation/) is preserved
 unchanged as historical evidence for the original QECLean layout. Its module
 counts and timings are not measurements of this standalone layout.
+
+The later [shared-certificate migration](provenance/shared-certificate-foundations.json)
+records which modules became compatibility imports and the single proof adapter
+for shift-based list packing. The original extraction records remain intact.
 
 Licensed under [Apache 2.0](LICENSE); see [NOTICE](NOTICE).

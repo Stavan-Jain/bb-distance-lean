@@ -17,9 +17,15 @@ def main():
     assert locked['rev'] == locked['inputRev'] == qec['rev'], 'QECLean pin and lock disagree'
     assert locked['url'] == qec['git'], 'QECLean URLs disagree'
     migration = json.loads((ROOT / 'provenance/module-migration.json').read_text())
+    shared = json.loads((ROOT / 'provenance/shared-certificate-foundations.json').read_text())
+    canonical = {item['canonical_module'] for item in shared['modules']}
     local = {p.relative_to(ROOT).with_suffix('').as_posix().replace('/', '.'): p
              for p in (ROOT / 'BBDistance').rglob('*.lean')}
     local['BBDistance'] = ROOT / 'BBDistance.lean'
+    for item in shared['modules']:
+        text = local[item['compatibility_module']].read_text()
+        text = re.sub(r'/\-.*?\-/', '', text, flags=re.S).strip()
+        assert text == f"import {item['canonical_module']}", 'Shared module must be import-only'
     visiting, seen = set(), set()
 
     def visit(module):
@@ -31,7 +37,8 @@ def main():
         text = local[module].read_text()
         for row in re.findall(r'^import (.+)$', text, re.M):
             for dependency in row.split():
-                assert dependency not in migration['modules'], f'Stale import: {dependency}'
+                assert dependency not in migration['modules'] or dependency in canonical, \
+                    f'Stale import: {dependency}'
                 if dependency == 'BBDistance' or dependency.startswith('BBDistance.'):
                     visit(dependency)
         visiting.remove(module)
