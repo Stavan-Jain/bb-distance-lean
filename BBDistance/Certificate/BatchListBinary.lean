@@ -33,7 +33,8 @@ theorem binary_reconstruction_list_sound {α : Type*} (width : Nat) (xs : List �
       packList width (xs.map output)) :
     ∀ x ∈ xs, reconX left (f x) ^^^ reconX right (g x) = output x := by
   have hone : packList width (xs.map fun _ => 1) = packF width xs.length (fun _ => 1) := by
-    unfold packList packF
+    rw [packList_eq_ofDigits]
+    unfold packF
     congr 1
     simp
   have hfm : ∀ y ∈ xs.map f, y < 2^width := by

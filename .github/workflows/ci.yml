@@ -50,5 +50,11 @@ jobs:
         run: lake env lean scripts/PublicApi.lean
       - name: Check Gross uses the general framework
         run: lake env lean scripts/GrossCheck.lean
+      - name: Check shared certificate imports
+        run: |
+          # This test imports the QEC umbrella in addition to BB's direct
+          # dependencies. `lake env lean` does not build missing imports.
+          lake build QEC.Stabilizer.Framework.Homological.Certificate
+          lake env lean scripts/SharedCertificateCheck.lean
       - name: Build concrete blueprint annotations
         run: lake build BBDistanceBlueprint

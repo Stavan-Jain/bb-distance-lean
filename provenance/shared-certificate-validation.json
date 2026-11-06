@@ -1,0 +1,51 @@
+{
+  "qeclean_revision": "b5a9f13d17b656091bf95024be8ebaf457d2c3a6",
+  "checks": [
+    {
+      "check": "certificates-build",
+      "returncode": 0,
+      "seconds": 107.56
+    },
+    {
+      "check": "shared-api",
+      "returncode": 0,
+      "seconds": 3.64
+    }
+  ],
+  "combined_import": {
+    "status": "passed",
+    "imports": [
+      "MittenDistance",
+      "BBDistance.Certificate"
+    ],
+    "mitten_revision": "bc0329a2ac763006645db867bf2b3c7f892fe7ab",
+    "distance_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "python_tests_passed": 13,
+  "regenerated_gross_modules": 2,
+  "regenerated_bravyi360_modules": 192,
+  "scope": "Generic library and combined imports passed locally; CI passed the full concrete BB source build, audit, and public API. Missing-dependency fix is verified independently without the cached umbrella.",
+  "full_bb_ci": {
+    "run": "https://github.com/Stavan-Jain/bb-distance-lean/actions/runs/42281716373",
+    "revision": "265129980953e25943c88e7251b7dedc09559588",
+    "source_build": "passed",
+    "axiom_audit": {
+      "declarations": 43946,
+      "modules": 433,
+      "status": "passed"
+    },
+    "public_api": "passed",
+    "gross_framework_check": "passed",
+    "failure": "The later shared-import script required an umbrella artifact not built by the default target."
+  },
+  "missing_dependency_regression": {
+    "method": "Remove the cached QEC certificate umbrella artifact, reproduce the missing-object failure, explicitly build that module, rerun the unchanged shared-import script.",
+    "before_fix_returncode": 1,
+    "dependency_build_returncode": 0,
+    "after_fix_returncode": 0
+  }
+}
