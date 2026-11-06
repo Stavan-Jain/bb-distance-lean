@@ -24,6 +24,7 @@ LEAN_NUM_THREADS=1 lake build
 lake env lean scripts/AxiomCheck.lean
 lake env lean scripts/PublicApi.lean
 lake env lean scripts/GrossCheck.lean
+LEAN_NUM_THREADS=1 lake build QEC.Stabilizer.Framework.Homological.Certificate
 lake env lean scripts/SharedCertificateCheck.lean
 ```
 
