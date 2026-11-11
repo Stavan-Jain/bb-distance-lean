@@ -9,11 +9,11 @@ run_cmd do
   let required := #[
     ``SmallCycleData.cycle_weight_ge_6,
     ``XDoubleCoverData.deckTrivial_of_bezout,
-    ``XDoubleCoverData.dangerous_bound_of_single_shape_of_logicalFloor,
-    ``XDoubleCoverData.dangerous_bound_of_pair_shape_of_logicalFloor]
+    ``XDoubleCoverData.dangerous_bound_of_single_shape,
+    ``XDoubleCoverData.dangerous_bound_of_pair_shape]
   -- The chain-level capstone runs the generic sector dichotomy and safe-floor reduction.
   let chainRoute := #[``XDoubleCoverData.safeFloor_of_seamCosetFloor,
-    ``XDoubleCoverData.chainWeight_ge_double_of_logicalFloor]
+    ``XDoubleCoverData.chainWeight_ge_double_of_sectors]
   -- Both certificate inputs must come from the generic Brouwer–Zimmermann layer.
   let bz := #[``XDoubleCoverData.SeamBZCertificate.seamCosetFloor,
     ``XDoubleCoverData.SeamBZCertificate.boundary_census,
@@ -23,7 +23,6 @@ run_cmd do
   -- dispatch as the dangerous floor and the seam-coset floor as the safe one.
   let foldDouble := #[``XDoubleCoverData.isLeast_logicalWeight_two_mul_of_foldDouble,
     ``Quantum.Stabilizer.FoldDouble.isLeast_logicalWeight_two_mul_of_floors_sector,
-    ``XDoubleCoverData.condition_J_xType, ``XDoubleCoverData.condition_P_xType,
     ``XDoubleCoverData.condition_F_of_seamCosetFloor,
     ``XDoubleCoverData.dangerousFloorNZ_of_admissible]
   -- ... and therefore no longer through Gross's own case split over the census.
@@ -31,18 +30,18 @@ run_cmd do
   let targets := #[
     (``gross_chain_distance_eq_12,
       #[``XDoubleCoverData.chain_distance_eq_double_of_admissible,
-        ``XDoubleCoverData.chain_distance_eq_double_of_logicalFloor,
+        ``XDoubleCoverData.chain_distance_eq_double,
         ``XDoubleCoverData.dangerousFloorNZ_of_admissible] ++ chainRoute ++ bz, perInstance),
     (``gross_pauli_distance_eq_12, foldDouble ++ bz, perInstance),
     (``grossStabilizerCode_hasCodeDistance_12_uncond,
-      #[``gross_pauli_distance_eq_12, ``StabilizerGroup.has_code_distance_of_isLeast]
+      #[``gross_pauli_distance_eq_12, ``StabilizerGroup.hasCodeDistance_of_isLeast]
         ++ foldDouble ++ bz, perInstance),
     (``grossStabilizerCodeWithDistance,
-      #[``gross_pauli_distance_eq_12, ``StabilizerGroup.has_code_distance_of_isLeast]
+      #[``gross_pauli_distance_eq_12, ``StabilizerGroup.hasCodeDistance_of_isLeast]
         ++ foldDouble ++ bz, perInstance),
     (``grossStabilizerCode_hasCodeDistance_12,
-      #[``XDoubleCoverData.pauli_distance_eq_double_of_logicalFloor,
-        ``StabilizerGroup.has_code_distance_of_isLeast,
+      #[``XDoubleCoverData.pauli_distance_eq_double,
+        ``StabilizerGroup.hasCodeDistance_of_isLeast,
         ``XDoubleCoverData.SeamBZCertificate.boundary_census], #[])]
   for (root, endpoints, forbidden) in targets do
     let mut pending := #[root]

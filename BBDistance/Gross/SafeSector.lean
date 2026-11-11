@@ -91,7 +91,7 @@ lemma grossCoverData_seamC : grossCoverData.seamC = seamC := rfl
 /-- The seam split sums to the base boundary. -/
 lemma seamN_add_seamC (ξ : BaseGroup → ZMod 2) (j : BaseGroup × Fin 2) :
     seamN ξ j + seamC ξ j = bbBoundary2Fn baseA baseB ξ j :=
-  grossCoverData.seamN_add_seamC ξ j
+  congrFun (grossCoverData.seamN_add_seamC ξ) j
 
 lemma seamC_add (ξ η : BaseGroup → ZMod 2) :
     seamC (ξ + η) = seamC ξ + seamC η :=
@@ -117,13 +117,17 @@ lemma sheet1_deckShift1 (s : GrossGroup × Fin 2 → ZMod 2) :
 lemma sheet0_self_add_deck (v : GrossGroup × Fin 2 → ZMod 2)
     (j : BaseGroup × Fin 2) :
     sheet0 (v + deckShift1 v) j = coverPush1 v j :=
-  grossCoverData.sheet0_self_add_deck v j
+  congrFun (grossCoverData.sheet0_add_sheet1 v) j
 
 /-- Sheet 1 of `v + σv` is also the pushforward. -/
 lemma sheet1_self_add_deck (v : GrossGroup × Fin 2 → ZMod 2)
     (j : BaseGroup × Fin 2) :
-    sheet1 (v + deckShift1 v) j = coverPush1 v j :=
-  grossCoverData.sheet1_self_add_deck v j
+    sheet1 (v + deckShift1 v) j = coverPush1 v j := by
+  have h := congrFun (grossCoverData.sheet0_add_sheet1 v) j
+  have h1 : grossCoverData.sheet1 (v + grossCoverData.deckShift1 v) j
+      = grossCoverData.sheet1 v j + grossCoverData.sheet0 v j := by
+    rw [grossCoverData.sheet1_add, Pi.add_apply, grossCoverData.sheet1_deckShift1]
+  exact h1.trans ((add_comm _ _).trans h)
 
 /-! ## The (M-im) hypothesis and the reduction -/
 

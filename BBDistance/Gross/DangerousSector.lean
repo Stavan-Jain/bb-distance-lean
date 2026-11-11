@@ -40,6 +40,25 @@ namespace BB
 
 open scoped BigOperators
 
+/-- Filtering through an equivalence preserves the count. -/
+private lemma card_filter_comp_equiv {α β : Type} [Fintype α] [Fintype β]
+    (e : α ≃ β) (p : β → Prop) [DecidablePred p] :
+    (Finset.univ.filter fun a => p (e a)).card
+      = (Finset.univ.filter p).card := by
+  apply Finset.card_bij (fun a _ => e a)
+  · intro a ha
+    rw [Finset.mem_filter] at ha ⊢
+    exact ⟨Finset.mem_univ _, ha.2⟩
+  · intro a₁ _ a₂ _ heq
+    exact e.injective heq
+  · intro b hb
+    rw [Finset.mem_filter] at hb
+    refine ⟨e.symm b, ?_, by simp⟩
+    rw [Finset.mem_filter]
+    refine ⟨Finset.mem_univ _, ?_⟩
+    rw [Equiv.apply_symm_apply]
+    exact hb.2
+
 -- Defeq checks through `coverPush1`/`coverPull1` and the lifted-stabilizer
 -- bridges unfold deep `Prod`/`ZMod` instance chains (same as
 -- `CoverTransfer.lean`).
@@ -71,7 +90,7 @@ lemma sheet1_add (v w : GrossGroup × Fin 2 → ZMod 2) :
 lemma sheet0_add_sheet1 (v : GrossGroup × Fin 2 → ZMod 2)
     (j : BaseGroup × Fin 2) :
     sheet0 v j + sheet1 v j = coverPush1 v j :=
-  grossCoverData.sheet0_add_sheet1 v j
+  congrFun (grossCoverData.sheet0_add_sheet1 v) j
 
 /-- Sheet-0 restriction inverts the pullback. -/
 lemma sheet0_coverPull1 (u : BaseGroup × Fin 2 → ZMod 2) :
@@ -147,7 +166,8 @@ lemma card_filter_split {I : Type} [Fintype I] (u : I → ZMod 2)
     (Finset.univ.filter fun j => u j ≠ 0).card
       = ((Finset.univ.filter fun j => u j ≠ 0).filter P).card
         + ((Finset.univ.filter fun j => u j ≠ 0).filter fun j => ¬ P j).card :=
-  XDoubleCoverData.card_filter_split u P
+  (Finset.card_filter_add_card_filter_not
+    (s := Finset.univ.filter fun j => u j ≠ 0) (p := P)).symm
 
 /-! ### Pointwise `∂₂` plumbing (kernel-decide support)
 
@@ -228,7 +248,7 @@ theorem dangerous_hexagon_bound (g : BaseGroup)
     (hv : v ∈ grossComplex.cycles) (hnb : v ∉ grossComplex.boundaries)
     (hb : coverPush1 v = bbBoundary2Fn baseA baseB (Pi.single g 1)) :
     12 ≤ grossComplex.chainWeight v := by
-  refine grossCoverData.dangerous_bound_of_single_shape_of_logicalFloor
+  refine grossCoverData.dangerous_bound_of_single_shape
     grossCoverData_logicalFloor (t := 3) (by decide) (Pi.single g 1) ?_
     (hexagon_seam_subset g) hv hnb hb
   change (Finset.univ.filter fun j : BaseGroup × Fin 2 =>
@@ -353,7 +373,7 @@ theorem dangerous_dpair_bound (g d : BaseGroup) (hd : d ∈ pairDirections)
         + bbBoundary2Fn baseA baseB (Pi.single (g + d) 1) := by
     rw [← bbBoundary2Fn_add]
     exact hb
-  refine grossCoverData.dangerous_bound_of_pair_shape_of_logicalFloor
+  refine grossCoverData.dangerous_bound_of_pair_shape
     grossCoverData_logicalFloor (t := 1) (by decide)
     (Pi.single g 1) (Pi.single (g + d) 1) ?_ ?_
     (dpair_seam_subset g d hd) hv hnb hb'

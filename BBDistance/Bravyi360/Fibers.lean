@@ -42,7 +42,7 @@ theorem bottom_fiber_basis (q : MiddleGroup × Fin 2) :
   have hsyndrome : (fun h => SmallCycle.termAt baseCover.Ac baseCover.Bc q h) =
       middleComplex.boundary1 (Pi.single q 1) := by
     funext h
-    exact (SmallCycle.bbBoundary1Fn_single_point middleA middleB q h).symm
+    exact (bbBoundary1Fn_single middleA middleB q h).symm
   rw [hsyndrome, baseCover.sheets_add_eq_push, baseCover.push1_single,
     baseCover.sheet0_single]
   apply maskOf_injective middleFaceEnum
@@ -105,7 +105,7 @@ theorem top_fiber_basis (q : Group × Fin 2) :
   have hsyndrome : (fun h => SmallCycle.termAt topCover.Ac topCover.Bc q h) =
       complex.boundary1 (Pi.single q 1) := by
     funext h
-    exact (SmallCycle.bbBoundary1Fn_single_point A B q h).symm
+    exact (bbBoundary1Fn_single A B q h).symm
   rw [hsyndrome, topCover.sheets_add_eq_push, topCover.push1_single,
     topCover.sheet0_single]
   apply maskOf_injective faceEnum

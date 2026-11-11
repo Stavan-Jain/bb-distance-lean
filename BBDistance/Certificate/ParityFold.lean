@@ -77,7 +77,7 @@ end Quantum.Stabilizer.Homological.F2Mask
 
 namespace Quantum.Stabilizer.Homological.F2Mask
 /-- Extending a bit-count prefix past a bounded word adds no set bits. -/
-theorem bitCount_extend (n m x : Nat) (hnm : n ≤ m) (hx : x < 2^n) :
+theorem bitCount_extend_of_le (n m x : Nat) (hnm : n ≤ m) (hx : x < 2^n) :
     bitCount m x = bitCount n x := by
   rw [show m = n + (m-n) by omega, bitCount_add, Nat.div_eq_of_lt hx]
   simp [bitCount_eq_card]
@@ -87,8 +87,8 @@ theorem parityFold_eq_of_cast_eq (n k a b : Nat) (hn : n ≤ 2^k)
     (ha : a < 2^n) (hb : b < 2^n)
     (h : (bitCount n a : ZMod 2) = (bitCount n b : ZMod 2)) :
     parityFold k a = parityFold k b := by
-  rw [parityFold_eq, parityFold_eq, bitCount_extend n (2^k) a hn ha,
-    bitCount_extend n (2^k) b hn hb]
+  rw [parityFold_eq, parityFold_eq, bitCount_extend_of_le n (2^k) a hn ha,
+    bitCount_extend_of_le n (2^k) b hn hb]
   have hv := congrArg ZMod.val h
   simpa using hv
 
