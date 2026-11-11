@@ -58,7 +58,7 @@ theorem reachableLightChains_card_le : reachableLightChains.card ≤ 12329961 :=
 theorem base_translate_mask_weight (g : BaseGroup) (v : BaseGroup × Fin 2 → ZMod 2) :
     bitCount 90 (maskOf baseQubitEnum (translate1 g v)) = bitCount 90 (maskOf baseQubitEnum v) := by
   rw [← card_support_eq_bitCount, ← card_support_eq_bitCount]
-  exact SmallCycle.card_support_translate1 g v
+  exact card_support_translate1 g v
 
 /-- The target population is invariant under every bottom translation. -/
 theorem reachableLightChains_closed (g : Multiplicative BaseGroup)

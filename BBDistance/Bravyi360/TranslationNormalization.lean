@@ -79,7 +79,7 @@ theorem translate1_not_boundary {A B : G → ZMod 2} (g : G) {v : G × Fin 2 →
 /-- Translation preserves Hamming weight in every BB complex. -/
 theorem chainWeight_translate1 (A B : G → ZMod 2) (g : G) (v : G × Fin 2 → ZMod 2) :
     (bbChainComplex A B).chainWeight (translate1 g v) =
-      (bbChainComplex A B).chainWeight v := SmallCycle.card_support_translate1 g v
+      (bbChainComplex A B).chainWeight v := card_support_translate1 g v
 
 namespace Bravyi360
 

@@ -58,7 +58,7 @@ theorem gross_chainWeight_ge_12_of_coverPush_eq_zero
     (hv : v ∈ grossComplex.cycles) (hnb : v ∉ grossComplex.boundaries)
     (h0 : coverPush1 v = 0) :
     12 ≤ grossComplex.chainWeight v :=
-  grossCoverData.dangerous_zero_rung_of_logicalFloor hbase hv hnb h0
+  grossCoverData.dangerous_zero_rung hbase hv hnb h0
 
 /-! ## The assembly -/
 
@@ -70,7 +70,7 @@ theorem gross_chainWeight_ge_12_of_sectors
     ∀ v : GrossGroup × Fin 2 → ZMod 2,
       v ∈ grossComplex.cycles → v ∉ grossComplex.boundaries →
       12 ≤ grossComplex.chainWeight v :=
-  grossCoverData.chainWeight_ge_double_of_logicalFloor hbase hM hMim
+  grossCoverData.chainWeight_ge_double_of_sectors hbase hM hMim
 
 /-- Conditional chain-level `d(gross) = 12`: the weight 12 is attained by a
 nontrivial cycle (the Phase-0 witness `τ(u*)`, unconditional) and is minimal
@@ -81,7 +81,7 @@ theorem gross_chain_distance_eq_12_of_sectors
     IsLeast {w : ℕ | ∃ v : GrossGroup × Fin 2 → ZMod 2,
       v ∈ grossComplex.cycles ∧ v ∉ grossComplex.boundaries ∧
       grossComplex.chainWeight v = w} 12 :=
-  grossCoverData.chain_distance_eq_double_of_logicalFloor hbase hM hMim
+  grossCoverData.chain_distance_eq_double hbase hM hMim
     uStar uStar_mem_cycles chainWeight_uStar tauUStar_not_mem_boundaries
 
 /-! ## The dual (Z) side, by the Φ duality -/
@@ -93,7 +93,7 @@ theorem gross_dual_chainWeight_ge_12_of_sectors
     (hMim : SafeSectorGe12) :
     ∀ c ∈ grossComplex.dualCycles, c ∉ grossComplex.dualBoundaries →
       12 ≤ grossComplex.chainWeight c :=
-  grossCoverData.dual_chainWeight_ge_double_of_logicalFloor hbase hM hMim
+  grossCoverData.dual_chainWeight_ge_double_of_sectors hbase hM hMim
 
 /-! ## Pauli-level corollaries (the CSS distance bridge) -/
 
@@ -121,7 +121,7 @@ theorem gross_logical_weight_ge_12_of_sectors
     (hg : Quantum.StabilizerGroup.IsNontrivialLogicalOperator g
       grossComplex.homologicalStabilizerGroup) :
     12 ≤ NQubitPauliGroupElement.weight g :=
-  grossCoverData.logical_weight_ge_double_of_logicalFloor hbase hM hMim g hg
+  grossCoverData.logical_weight_ge_double_of_sectors hbase hM hMim g hg
 
 /-- **Conditional Pauli-level `d(gross) = 12`**: given the three sector inputs,
 12 is the least weight of a nontrivial logical operator of the gross homological
@@ -133,7 +133,7 @@ theorem gross_pauli_distance_eq_12_of_sectors
       Quantum.StabilizerGroup.IsNontrivialLogicalOperator g
         grossComplex.homologicalStabilizerGroup ∧
       NQubitPauliGroupElement.weight g = w} 12 :=
-  grossCoverData.pauli_distance_eq_double_of_logicalFloor hbase hM hMim
+  grossCoverData.pauli_distance_eq_double hbase hM hMim
     uStar uStar_mem_cycles chainWeight_uStar tauUStar_not_mem_boundaries
 
 end BB

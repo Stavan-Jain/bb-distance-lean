@@ -8,9 +8,10 @@ its proof, checked certificates, and deterministic generators together.
 ## Dependency and build
 
 QECLean is pinned to commit
-[`f51011bd6d1af9e225a19a5d5ff672000f3c9d94`](https://github.com/Stavan-Jain/QECLean/commit/f51011bd6d1af9e225a19a5d5ff672000f3c9d94)
-in both `lakefile.toml` and `lake-manifest.json`. This is the foundations commit
-on [QECLean PR #97](https://github.com/Stavan-Jain/QECLean/pull/97), rather than a
+[`4b7419ccaa8010af6a008be6dcf26d3d17e24329`](https://github.com/Stavan-Jain/QECLean/commit/4b7419ccaa8010af6a008be6dcf26d3d17e24329)
+in both `lakefile.toml` and `lake-manifest.json`. This is a commit on QECLean
+`main`, after its repo-wide cleanup
+([PR #107](https://github.com/Stavan-Jain/QECLean/pull/107)), rather than a
 moving branch or a released version. Lean is pinned to `v4.30.0-rc2`; all
 transitive dependencies are locked in the manifest.
 

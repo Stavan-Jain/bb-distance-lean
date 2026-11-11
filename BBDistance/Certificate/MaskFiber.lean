@@ -13,9 +13,8 @@ variable {G H : Type}
 
 /-- The two sheet restrictions sum to the whole pushforward as a chain. -/
 theorem sheets_add_eq_push (v : G × Fin 2 → ZMod 2) :
-    D.sheet0 v + D.sheet1 v = D.push1 v := by
-  funext i
-  exact D.sheet0_add_sheet1 v i
+    D.sheet0 v + D.sheet1 v = D.push1 v :=
+  D.sheet0_add_sheet1 v
 
 /-- Pushforward sends a point mass to the point mass of its projected qubit. -/
 theorem push1_single (q : G × Fin 2) :
@@ -92,7 +91,7 @@ theorem sheet_equation_of_basis
     · intro q
       rw [hbasis]
       funext h
-      exact (SmallCycle.bbBoundary1Fn_single_point D.Ac D.Bc q h).symm
+      exact (bbBoundary1Fn_single D.Ac D.Bc q h).symm
   have h := hfull v
   rw [D.sheets_add_eq_push, show D.coverComplex.boundary1 v = 0 from hv] at h
   funext i

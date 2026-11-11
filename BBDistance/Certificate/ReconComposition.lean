@@ -24,8 +24,8 @@ theorem reconX_comp (outer inner : List (Nat × Nat)) (value : Nat) :
 /-- Fast parity is unchanged when both counting widths contain a bounded mask. -/
 theorem parityFold_change_width (n k l x : Nat) (hnk : n ≤ 2^k) (hnl : n ≤ 2^l)
     (hx : x < 2^n) : parityFold k x = parityFold l x := by
-  rw [parityFold_eq,parityFold_eq,bitCount_extend n (2^k) x hnk hx,
-    bitCount_extend n (2^l) x hnl hx]
+  rw [parityFold_eq,parityFold_eq,bitCount_extend_of_le n (2^k) x hnk hx,
+    bitCount_extend_of_le n (2^l) x hnl hx]
 
 /-- A single annihilating dual with odd right-hand side excludes an on-shadow solution. -/
 theorem no_supported_solution_of_raw_dual (k : Nat) (E R TE TR : List (Nat × Nat))

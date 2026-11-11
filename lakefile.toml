@@ -14,7 +14,7 @@ maxSynthPendingDepth = 3
 [[require]]
 name = "QEC"
 git = "https://github.com/Stavan-Jain/QECLean"
-rev = "f51011bd6d1af9e225a19a5d5ff672000f3c9d94"
+rev = "4b7419ccaa8010af6a008be6dcf26d3d17e24329"
 
 [[lean_lib]]
 name = "BBDistance"

@@ -32,6 +32,37 @@ namespace Stabilizer
 namespace Homological
 namespace BB
 
+/-! ## The two blocks of the Bézout chain identity -/
+
+/-- Left block of the Bézout chain identity: from `P ⋆ A + Q ⋆ B = 1 + x^s`,
+`w_L + σ w_L + Q ⋆ (B ⋆ w_L + A ⋆ w_R) = A ⋆ (P ⋆ w_L + Q ⋆ w_R)`. -/
+private lemma bezout_blockL {G H : Type}
+    [Fintype G] [AddCommGroup G] [DecidableEq G]
+    [Fintype H] [AddCommGroup H] [DecidableEq H]
+    (D : XDoubleCoverData G H) (P Q : G → ZMod 2)
+    (hPQ : P ⋆ D.Ac + Q ⋆ D.Bc = D.deckPoly)
+    (wL wR : G → ZMod 2) :
+    wL + D.deckShift0 wL
+        + Q ⋆ (D.Bc ⋆ wL + D.Ac ⋆ wR)
+      = D.Ac ⋆ (P ⋆ wL + Q ⋆ wR) := by
+  have h := conv_bezout_block D.Ac D.Bc P Q wL wR
+  rwa [hPQ, D.conv_deckPoly_eq] at h
+
+/-- Right block of the Bézout chain identity: from `P ⋆ A + Q ⋆ B = 1 + x^s`,
+`w_R + σ w_R + P ⋆ (B ⋆ w_L + A ⋆ w_R) = B ⋆ (P ⋆ w_L + Q ⋆ w_R)`. -/
+private lemma bezout_blockR {G H : Type}
+    [Fintype G] [AddCommGroup G] [DecidableEq G]
+    [Fintype H] [AddCommGroup H] [DecidableEq H]
+    (D : XDoubleCoverData G H) (P Q : G → ZMod 2)
+    (hPQ : P ⋆ D.Ac + Q ⋆ D.Bc = D.deckPoly)
+    (wL wR : G → ZMod 2) :
+    wR + D.deckShift0 wR
+        + P ⋆ (D.Bc ⋆ wL + D.Ac ⋆ wR)
+      = D.Bc ⋆ (P ⋆ wL + Q ⋆ wR) := by
+  have h := conv_bezout_block D.Bc D.Ac Q P wR wL
+  rwa [add_comm (Q ⋆ D.Bc), hPQ, D.conv_deckPoly_eq, add_comm (D.Ac ⋆ wR),
+    add_comm (Q ⋆ wR)] at h
+
 /-! ## Machine-certified polynomial identities -/
 
 theorem gross_conv_B_B : grossB ⋆ grossB = bSquaredPoly := by
@@ -87,7 +118,7 @@ lemma cycle_conv_eq {v : GrossGroup × Fin 2 → ZMod 2}
 lemma conv_grossA_homotopyChain {v : GrossGroup × Fin 2 → ZMod 2}
     (hv : v ∈ grossComplex.cycles) :
     grossA ⋆ homotopyChain v = leftHalf v + deckShift0 (leftHalf v) := by
-  have h := grossCoverData.bezout_blockL 0 (onePlusX2 ⋆ grossB) gross_bezout
+  have h := bezout_blockL grossCoverData 0 (onePlusX2 ⋆ grossB) gross_bezout
     (leftHalf v) (rightHalf v)
   have hcyc : grossB ⋆ leftHalf v + grossA ⋆ rightHalf v = 0 := hv
   change leftHalf v + deckShift0 (leftHalf v)
@@ -100,7 +131,7 @@ lemma conv_grossA_homotopyChain {v : GrossGroup × Fin 2 → ZMod 2}
 /-- `B ⋆ z = v_R + σ v_R`. -/
 lemma conv_grossB_homotopyChain (v : GrossGroup × Fin 2 → ZMod 2) :
     grossB ⋆ homotopyChain v = rightHalf v + deckShift0 (rightHalf v) := by
-  have h := grossCoverData.bezout_blockR 0 (onePlusX2 ⋆ grossB) gross_bezout
+  have h := bezout_blockR grossCoverData 0 (onePlusX2 ⋆ grossB) gross_bezout
     (leftHalf v) (rightHalf v)
   change rightHalf v + deckShift0 (rightHalf v)
       + (0 : GrossGroup → ZMod 2) ⋆ (grossB ⋆ leftHalf v + grossA ⋆ rightHalf v)

@@ -65,13 +65,6 @@ theorem packed_pair_sum (width size : Nat) (f : Nat → Nat) (hw : 0 < width)
 
 set_option maxHeartbeats 0 in
 -- Elaborating this packed certificate can exceed the default heartbeat budget.
-/-- Counting set bits never exceeds the inspected bit length. -/
-theorem bitCount_le (n value : Nat) : bitCount n value ≤ n := by
-  rw [bitCount_eq_card]
-  exact (Finset.card_filter_le _ _).trans_eq (Finset.card_range n)
-
-set_option maxHeartbeats 0 in
--- Elaborating this packed certificate can exceed the default heartbeat budget.
 /-- One-bit lanes are the bit counts of the corresponding input bits. -/
 theorem packF_bitCount_one (size value : Nat) (hv : value < 2^size) :
     value = packF 1 size (fun i => bitCount 1 (value >>> i)) := by
@@ -187,13 +180,6 @@ set_option maxHeartbeats 0 in
 theorem bitCount_zero_word (bits : Nat) : bitCount bits 0 = 0 := by
   rw [bitCount_eq_card]
   simp
-
-set_option maxHeartbeats 0 in
--- Elaborating this packed certificate can exceed the default heartbeat budget.
-/-- Extending the inspection range does not change a bounded word's popcount. -/
-theorem bitCount_extend (bits extra value : Nat) (hv : value < 2^bits) :
-    bitCount (bits+extra) value = bitCount bits value := by
-  rw [bitCount_add, Nat.div_eq_of_lt hv, bitCount_zero_word, Nat.add_zero]
 
 set_option maxHeartbeats 0 in
 -- Elaborating this packed certificate can exceed the default heartbeat budget.

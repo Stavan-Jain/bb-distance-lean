@@ -33,13 +33,7 @@ open scoped BigOperators
 lemma eq_indicator_support {I : Type} [Fintype I] [DecidableEq I]
     (u : I → ZMod 2) :
     u = fun p => if p ∈ (Finset.univ.filter fun q => u q ≠ 0) then 1 else 0 :=
-  SmallCycle.eq_indicator_support u
-
-/-- Translation preserves support size (1-chains over the base group). -/
-lemma card_support_translate1 (c : BaseGroup) (u : BaseGroup × Fin 2 → ZMod 2) :
-    (Finset.univ.filter fun p => translate1 c u p ≠ 0).card
-      = (Finset.univ.filter fun p => u p ≠ 0).card :=
-  SmallCycle.card_support_translate1 c u
+  self_eq_indF2_filter u
 
 /-! ## The sparse syndrome form
 
@@ -58,14 +52,14 @@ def syndAt (S : Finset (BaseGroup × Fin 2)) (h : BaseGroup) : ZMod 2 :=
 /-- `∂₁` of a point mass, in either block. -/
 lemma bbBoundary1Fn_single_point (q : BaseGroup × Fin 2) (h : BaseGroup) :
     bbBoundary1Fn baseA baseB (Pi.single q 1) h = termAt q h :=
-  SmallCycle.bbBoundary1Fn_single_point baseA baseB q h
+  bbBoundary1Fn_single baseA baseB q h
 
 /-- Indicator of `insert` decomposes as indicator plus a point mass. -/
 lemma indicator_insert {I : Type} [DecidableEq I] (a : I) (S : Finset I)
     (ha : a ∉ S) :
     (fun p => if p ∈ insert a S then (1 : ZMod 2) else 0)
       = (fun p => if p ∈ S then 1 else 0) + Pi.single a 1 :=
-  SmallCycle.indicator_insert a S ha
+  (indF2_insert ha).trans (add_comm _ _)
 
 /-- **The sparse-syndrome bridge**: on indicator chains, `∂₁` evaluates to
 `syndAt`. -/
@@ -73,12 +67,7 @@ lemma bbBoundary1Fn_indicator (S : Finset (BaseGroup × Fin 2)) :
     ∀ h : BaseGroup,
       bbBoundary1Fn baseA baseB (fun q => if q ∈ S then 1 else 0) h
         = syndAt S h :=
-  SmallCycle.bbBoundary1Fn_indicator baseA baseB S
-
-/-- The augmentation is multiplicative on convolutions. -/
-lemma sum_conv {G : Type} [Fintype G] [AddCommGroup G] (a b : G → ZMod 2) :
-    ∑ g : G, (a ⋆ b) g = (∑ h : G, a h) * (∑ g : G, b g) :=
-  SmallCycle.sum_conv a b
+  SmallCycle.bbBoundary1Fn_indF2 baseA baseB S
 
 /-! ## The normalized finite check
 
@@ -327,14 +316,17 @@ the (normalized) weight-2 and weight-4 configurations. -/
 /-- Cycles of the base complex have zero total parity. -/
 lemma cycle_total_parity (u : BaseGroup × Fin 2 → ZMod 2)
     (hcyc : bbBoundary1Fn baseA baseB u = 0) :
-    ∑ p : BaseGroup × Fin 2, u p = 0 :=
-  baseSmallCycleData.cycle_total_parity u hcyc
+    ∑ p : BaseGroup × Fin 2, u p = 0 := by
+  rw [← natCast_card_support]
+  exact (ZMod.natCast_eq_zero_iff_even).mpr
+    (cycle_support_even baseA baseB baseSmallCycleData.epsA baseSmallCycleData.epsB hcyc)
 
 /-- Cycles of the base complex have even weight. -/
 lemma cycle_weight_even (u : BaseGroup × Fin 2 → ZMod 2)
     (hcyc : bbBoundary1Fn baseA baseB u = 0) :
     (Finset.univ.filter fun p => u p ≠ 0).card % 2 = 0 :=
-  baseSmallCycleData.cycle_weight_even u hcyc
+  Nat.even_iff.mp
+    (cycle_support_even baseA baseB baseSmallCycleData.epsA baseSmallCycleData.epsB hcyc)
 
 /-! ## The small-cycle theorem (strong form) -/
 

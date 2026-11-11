@@ -21,8 +21,8 @@ namespace Quantum.Stabilizer.Homological.BB
 `grossStabilizerCode_hasCodeDistance_12_uncond` below is unconditional. -/
 theorem grossStabilizerCode_hasCodeDistance_12 (hMim : MImBound) :
     Quantum.StabilizerGroup.HasCodeDistance grossStabilizerCode 12 :=
-  Quantum.StabilizerGroup.has_code_distance_of_isLeast grossStabilizerCode
-    grossStabilizerCode_toSubgroup_eq (by decide)
+  Quantum.StabilizerGroup.hasCodeDistance_of_isLeast grossStabilizerCode
+    grossStabilizerCode_toSubgroup_eq
     (gross_pauli_distance_eq_12_of_engine GrossBZ.lightStabilizerClassification_bz hMim)
 
 /-- **Unconditional `HasCodeDistance grossStabilizerCode 12`** — the Gross
@@ -36,8 +36,8 @@ generic Doubling theorem in its fold-and-double form
 `Quot.sound` — no `native_decide`, no `sorry`. -/
 theorem grossStabilizerCode_hasCodeDistance_12_uncond :
     Quantum.StabilizerGroup.HasCodeDistance grossStabilizerCode 12 :=
-  Quantum.StabilizerGroup.has_code_distance_of_isLeast grossStabilizerCode
-    grossStabilizerCode_toSubgroup_eq (by decide) gross_pauli_distance_eq_12
+  Quantum.StabilizerGroup.hasCodeDistance_of_isLeast grossStabilizerCode
+    grossStabilizerCode_toSubgroup_eq gross_pauli_distance_eq_12
 
 /-- **The Gross `[[144, 12, 12]]` code as a fully-parametrized object.** Bundles
 the stabilizer code (`StabilizerCode 144 12`) with its now-unconditional
